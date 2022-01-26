@@ -1,9 +1,12 @@
 #include<bits/stdc++.h>
 
 using namespace std;
+
+//1+2+3...+n
 long long f(long long n){
     return (1+n)*n/2;
 }
+
 long long g(long long n){
     if(n == 1)return 1;
     return f(n) + g(n-1);
