@@ -13,16 +13,9 @@ public class Test {
 			String string[] = input.next().split(":");
 			a = Long.valueOf(string[0]);
 			b = Long.valueOf(string[1]);
-			map.put(a, b);
-			if(a == 0 && b == 0)break;
-		}
-		while(input.hasNext()) {
-			long a,b;
-			String string[] = input.next().split(":");
-			a = Long.valueOf(string[0]);
-			b = Long.valueOf(string[1]);
 			if(map.containsKey(a))sum += map.get(a) * b;
-			if(a == 0 && b == 0)break;
+			else map.put(a, b);
+			if(a == 0 && b == 0)continue;
 		}
 		System.out.println(sum);
 		input.close();
