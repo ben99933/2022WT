@@ -2,24 +2,7 @@
 
 using namespace std;
 
-void dfs(int layer,bool visited[],int number[],int len){
-    
-    if(layer == len){
-        for(int i = 0;i<len;i++){
-            cout << number[i];
-        }
-        cout << "\n";
-    }else{
-        for(int i = len-1;i>=0;i--){
-            if(visited[i])continue;
-            visited[i] = true;
-            number[layer] = i+1;
-            dfs(layer+1,visited,number,len);
-            visited[i] = false;
-        }
 
-    }
-}
 
 int main(){
 
